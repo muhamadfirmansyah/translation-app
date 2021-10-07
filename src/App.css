@@ -1,38 +1,152 @@
-.App {
+body {
+  background-color: #FEFAE0;
+}
+
+a {
+  color: #D4A373;
+  font-weight: bold;
+}
+
+header {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1 {
+  font-size: 22px;
+  color: #D4A373;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main .container {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  background-color: #FAEDCD;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  /* box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; */
 }
 
-.App-link {
-  color: #61dafb;
+main .container div {
+  width: 100%;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+main .container div h5 {
+  color: #CCD5AE;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+::placeholder {
+  color: #CCD5AE;
+}
+
+main .container div textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  resize: none;
+  outline: none;
+  padding: 1.2rem;
+  height: 9rem;
+  line-height: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  background-color: #fdfdfa;
+  color: #000000;
+  display: block;
+}
+
+main .container div.target textarea {
+  background-color: #E9EDC9;
+}
+
+main .container div.target textarea.err {
+  color: red;
+}
+
+main .container div .actions {
+  position: absolute;
+  width: auto;
+  bottom: 0.8rem;
+  right: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+main .container div .actions button {
+  background-color: #FFFFFF;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+main .container div .actions button:hover {
+  background-color: #fff9eb;
+}
+
+main .container div .actions button:active {
+  background-color: #faedcd;
+}
+
+main .container div .actions button.translate-button {
+  background-color: #e9edc9;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #d4a373;
+}
+
+main .container div .actions button.translate-button:hover {
+  background-color: #e3e9ba;
+}
+
+main .container div .actions button.translate-button:active {
+  background-color: #d3dba1;
+}
+
+main .container div .text-counter {
+  position: absolute;
+  left: 0.8rem;
+  bottom: 0.8rem;
+  color: #ccd5ae;
+  font-size: 12px;
+}
+
+main .container div .text-counter.reached {
+  color: red;
+}
+
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #e7e7e7;
+  cursor: pointer !important;
+}
+
+@media screen and (max-width: 915px) {
+  main .container {
+    width: 90%;
   }
 }
